@@ -8,7 +8,7 @@ void mergeM(int arr[], int left, int mid, int right)
     fprintf(ptrOut, "Entered function mergeM with arr = ");
     for (int i = 0; i < right; i++)
     {
-        fprintf(ptrOut, "%d ", arr[i]);
+        fprintf(ptrOut, "%d", arr[i]);
     }
 
     fprintf(ptrOut, "\n left = %d , mid = %d and right = %d \n", left, mid, right);
@@ -71,14 +71,14 @@ void mergeSort(int arr[], int left, int right)
     {
         fprintf(ptrOut, "%d ", arr[i]);
     }
-    fprintf(ptrOut, "\n left = %d and right = %d \n", left, right);
+    fprintf(ptrOut, "\n left = %d  and right = %d \n", left, right);
 
     if (left < right)
     {
-        int mid = left + (right - left) / 2; // to find mid value
-        mergeSort(arr, left, mid);           // recursively calling for left sub array
-        mergeSort(arr, mid + 1, right);      // recursively calling for right sub array
-        mergeM(arr, left, mid, right);       // calling merge function for merging the subarrays
+        int mid = (left + right) / 2;   // to find mid value
+        mergeSort(arr, left, mid);      // recursively calling for left sub array
+        mergeSort(arr, mid + 1, right); // recursively calling for right sub array
+        mergeM(arr, left, mid, right);  // calling merge function for merging the subarrays
     }
 }
 int main()
@@ -97,7 +97,7 @@ int main()
         i++;
     }
     mergeSort(arr, 0, size + 1);
-    fprintf(ptrOut, "Sorted array : ");
+    fprintf(ptrOut, "\n\nSorted array : ");
     for (int i = 0; i <= size; i++)
     {
         fprintf(ptrOut, "%d ", arr[i]);
