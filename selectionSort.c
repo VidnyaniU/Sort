@@ -25,7 +25,7 @@ void selectionS(int *arr, int length)
 }
 int main()
 {
-    int arr[] = {23, 65, 21, 2, 6};
+    int arr[] = {23, 65, 21, 2, 6,43};
     int length = sizeof(arr) / sizeof(arr[0]);
 
     selectionS(arr, length);
