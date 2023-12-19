@@ -9,7 +9,7 @@ void swap(int *a, int *b)
 void selectionS(int *arr, int length)
 {
     int i, j;
-    for (i = 0; i < length - 1; i++)
+    for (i = 0; i < length-1; i++)
     {
         int minIdx = i;
 
